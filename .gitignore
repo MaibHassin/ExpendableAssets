@@ -48,6 +48,7 @@ sysinfo.txt
 
 # Builds
 *.apk
+test.apk
 *.unitypackage
 
 # Crashlytics generated file
