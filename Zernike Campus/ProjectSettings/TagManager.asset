@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Building List Panel
+  - Search Button
+  - 3dbutton
   layers:
   - Default
   - TransparentFX
