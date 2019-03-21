@@ -15,7 +15,7 @@ public class Controls : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
@@ -27,9 +27,9 @@ public class Controls : MonoBehaviour
 
                 //boundaries for camera to stay in
                 transform.position = new Vector3(
-                    Mathf.Clamp(transform.position.x, -814.0f, 1400.0f),
-                    Mathf.Clamp(transform.position.y, 1190.0f, 1347.0f),
-                    Mathf.Clamp(transform.position.z, -3603.94f, -3603.94f));
+                    Mathf.Clamp(transform.position.x, -300.0f, 300.0f),
+                    Mathf.Clamp(transform.position.y, -460.0f, 375.0f),
+                    Mathf.Clamp(transform.position.z, 8.0f, 8.0f));
             }
             else if (Input.touchCount == 2)
             {
@@ -46,7 +46,7 @@ public class Controls : MonoBehaviour
 
                 Camera.main.fieldOfView += deltaMagDiff * 0.1f;
 
-                Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, 25.0f, 100.0f);
+                Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, 80.0f, 120.0f);
             }
         }
     }
