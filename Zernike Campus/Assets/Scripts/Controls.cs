@@ -7,6 +7,7 @@ public class Controls : MonoBehaviour
 {
 
     public float speed; //panning speed
+    public onclickScript buildingClicked;
 
 
     // Start is called before the first frame update
@@ -17,7 +18,7 @@ public class Controls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!EventSystem.current.IsPointerOverGameObject())
+        if (!EventSystem.current.IsPointerOverGameObject() && buildingClicked.zoomed == false)
         {
             if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved) //if one or more finger is on screen and the finger moved then
             {
