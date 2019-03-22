@@ -10,12 +10,13 @@ public class OpenBuildingsList : MonoBehaviour
     public GameObject Panel;
     public GameObject filterPanel;
     public GameObject panel3d;
+    public GameObject infoPanel;
 
     public GameObject button3d;
     public GameObject button3dChild;
     public GameObject buttonInfo;
     public GameObject buttonInfoChild;
-    GameObject searchImg;
+    public GameObject searchImg;
     GameObject searchTxt;
     Image btn3d;
     Image btn3dChild;
@@ -171,7 +172,7 @@ public class OpenBuildingsList : MonoBehaviour
 
     public void openPanel()
     {
-        if(Panel != null)
+        if (Panel != null)
         {
             Panel.SetActive(true);
             if (btn3d.enabled)
@@ -186,7 +187,7 @@ public class OpenBuildingsList : MonoBehaviour
 
     public void closePanel()
     {
-        searchImg = GameObject.Find("SearchImage").gameObject;
+        
         if (Panel != null)
         {
             Panel.SetActive(false);
@@ -242,6 +243,36 @@ public class OpenBuildingsList : MonoBehaviour
         if (panel3d != null)
         {
             panel3d.SetActive(false);
+            if (!btn3d.enabled)
+            {
+                btn3d.enabled = !btn3d.enabled;
+                btn3dChild.enabled = !btn3dChild.enabled;
+                btnInfo.enabled = !btnInfo.enabled;
+                btnInfoChild.enabled = !btnInfoChild.enabled;
+            }
+        }
+    }
+
+    public void OpenInfoPanel()
+    {
+        if (infoPanel != null)
+        {
+            infoPanel.SetActive(true);
+            if (btn3d.enabled)
+            {
+                btn3d.enabled = !btn3d.enabled;
+                btn3dChild.enabled = !btn3dChild.enabled;
+                btnInfo.enabled = !btnInfo.enabled;
+                btnInfoChild.enabled = !btnInfoChild.enabled;
+            }
+        }
+    }
+
+    public void CloseInfoPanel()
+    {
+        if(infoPanel != null)
+        {
+            infoPanel.SetActive(false);
             if (!btn3d.enabled)
             {
                 btn3d.enabled = !btn3d.enabled;
