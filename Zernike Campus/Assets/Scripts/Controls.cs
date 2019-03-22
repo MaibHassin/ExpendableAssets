@@ -27,9 +27,9 @@ public class Controls : MonoBehaviour
 
                 //boundaries for camera to stay in
                 transform.position = new Vector3(
-                    Mathf.Clamp(transform.position.x, -300.0f, 300.0f),
-                    Mathf.Clamp(transform.position.y, -460.0f, 375.0f),
-                    Mathf.Clamp(transform.position.z, 8.0f, 8.0f));
+                    Mathf.Clamp(transform.position.x, -215.0f, 37.0f),
+                    Mathf.Clamp(transform.position.y, -160.0f, 250.0f),
+                    Mathf.Clamp(transform.position.z, -57.205f, -57.205f));
             }
             else if (Input.touchCount == 2)
             {
@@ -44,9 +44,9 @@ public class Controls : MonoBehaviour
 
                 float deltaMagDiff = previousTouchDeltaMag - touchDeltaMag;
 
-                Camera.main.fieldOfView += deltaMagDiff * 0.1f;
+                Camera.main.orthographicSize += deltaMagDiff * 0.1f;
 
-                Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, 80.0f, 120.0f);
+                Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, 35.0f, 100.0f);
             }
         }
     }

@@ -22,7 +22,7 @@ public class OpenBuildingsList : MonoBehaviour
     public BuildingsList buildList = new BuildingsList();
     public TimingsList timeList = new TimingsList();
 
-    string[] mon = new string[12];
+    string[] mon = new string[10];
 
     
 
@@ -42,16 +42,16 @@ public class OpenBuildingsList : MonoBehaviour
         btnInfoChild = buttonInfoChild.GetComponent<Image>();
 
         Dictionary<string, List<string>[]> basicInfo = new Dictionary<string, List<string>[]>();
-        List<string>[] buildingInfoCode = new List<string>[12];
+        List<string>[] buildingInfoCode = new List<string>[10];
 
         Dictionary<int, List<bool>[]> departmentInfo = new Dictionary<int, List<bool>[]>();
-        List<bool>[] departmentInfoDetail = new List<bool>[12];
+        List<bool>[] departmentInfoDetail = new List<bool>[10];
 
         Dictionary<int, List<bool>[]> facilitiesInfo = new Dictionary<int, List<bool>[]>();
-        List<bool>[] facilitiesInfoDetail = new List<bool>[12];
+        List<bool>[] facilitiesInfoDetail = new List<bool>[10];
 
         Dictionary<int, List<string>[]> timingInfo = new Dictionary<int, List<string>[]>();
-        List<string>[] timingInfoDetail = new List<string>[12];
+        List<string>[] timingInfoDetail = new List<string>[10];
 
         TextAsset asset = Resources.Load("BuildingsList") as TextAsset;
         TextAsset timeAsset = Resources.Load("BuildingTimings") as TextAsset;
@@ -131,7 +131,7 @@ public class OpenBuildingsList : MonoBehaviour
         List<string>[] timingInfoResult;
         if(timingInfo.TryGetValue(0, out timingInfoResult) && basicInfo.TryGetValue("0", out buildingInfoResult) && departmentInfo.TryGetValue(0, out departmentInfoResult) && facilitiesInfo.TryGetValue(0, out facilitiesInfoResult))
         {
-            for(int j=0; j<12; j++)
+            for(int j=0; j<10; j++)
             {
                 for(int k=0; k<4; k++)
                 {
