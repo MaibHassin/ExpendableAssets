@@ -9,10 +9,14 @@ public class OpenBuildingsList : MonoBehaviour
 
     public GameObject Panel;
     public GameObject filterPanel;
+    public GameObject panel3d;
+
     public GameObject button3d;
     public GameObject button3dChild;
     public GameObject buttonInfo;
     public GameObject buttonInfoChild;
+    GameObject searchImg;
+    GameObject searchTxt;
     Image btn3d;
     Image btn3dChild;
     Image btnInfo;
@@ -24,13 +28,19 @@ public class OpenBuildingsList : MonoBehaviour
 
     string[] mon = new string[10];
 
-    
+    public Camera cameraMain;
+    public Camera camera3d;
+
+    public GameObject model3d = null;
+    string buildingCodeText;
+    Vector3 camera3dpos;
 
     int i = 0;
 
     private void Start()
     {
         //Debug.Log(Path.GetFileNameWithoutExtension("./Resources/buildingData"));
+        searchTxt = GameObject.Find("SearchButtonText").gameObject;
         button3d = GameObject.Find("button3D").gameObject;
         button3dChild = GameObject.Find("b3dchild").gameObject;
         buttonInfo = GameObject.Find("buttonInfo").gameObject;
@@ -176,9 +186,16 @@ public class OpenBuildingsList : MonoBehaviour
 
     public void closePanel()
     {
-        if(Panel != null)
+        searchImg = GameObject.Find("SearchImage").gameObject;
+        if (Panel != null)
         {
             Panel.SetActive(false);
+            btn3d.enabled = false;
+            btn3dChild.enabled = false;
+            btnInfo.enabled = false;
+            btnInfoChild.enabled = false;
+            searchTxt.SetActive(false);
+            searchImg.SetActive(true);
         }
     }
 
@@ -196,5 +213,57 @@ public class OpenBuildingsList : MonoBehaviour
         {
             filterPanel.SetActive(false);
         }
+    }
+
+    public void open3dPanel()
+    {
+        cameraMain.enabled = false;
+        camera3d.enabled = true;
+        camera3dpos = camera3d.transform.position;
+        GenerateModel();
+        if (panel3d != null)
+        {
+            panel3d.SetActive(true);
+            if (btn3d.enabled)
+            {
+                btn3d.enabled = !btn3d.enabled;
+                btn3dChild.enabled = !btn3dChild.enabled;
+                btnInfo.enabled = !btnInfo.enabled;
+                btnInfoChild.enabled = !btnInfoChild.enabled;
+            }
+        }
+    }
+
+    public void close3dPanel()
+    {
+        GameObject.Find("3dCamera").GetComponent<Camera>().enabled = false;
+        GameObject.Find("Main Camera").GetComponent<Camera>().enabled = true;
+        Destroy(GameObject.Find("building3d"));
+        if (panel3d != null)
+        {
+            panel3d.SetActive(false);
+            if (!btn3d.enabled)
+            {
+                btn3d.enabled = !btn3d.enabled;
+                btn3dChild.enabled = !btn3dChild.enabled;
+                btnInfo.enabled = !btnInfo.enabled;
+                btnInfoChild.enabled = !btnInfoChild.enabled;
+            }
+        }
+    }
+
+    public void GenerateModel()
+    {
+        buildingCodeText = GameObject.Find("SearchButtonText").GetComponent<Text>().text;
+        //model3d = GameObject.Find(buildingCodeText);
+        model3d = Instantiate(GameObject.Find(buildingCodeText), camera3dpos, Quaternion.identity);
+        model3d.name = "building3d";
+        model3d.layer = 9;
+        model3d.layer = LayerMask.NameToLayer("3dlayer");
+        foreach(Transform trans in model3d.GetComponentsInChildren<Transform>(true))
+        {
+            trans.gameObject.layer = 9;
+        }
+        model3d.AddComponent<Rotate3d>();
     }
 }

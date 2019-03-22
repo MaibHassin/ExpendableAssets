@@ -75,6 +75,7 @@ public class SelectBuilding : MonoBehaviour
         if(searchImage != null)
         {
             searchImage.SetActive(false);
+            searchText.SetActive(true);
         }
         selectedButtonText = thisButton.GetComponentInChildren<Text>().text;
         searchText.GetComponent<Text>().text = selectedButtonText;
