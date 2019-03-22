@@ -262,7 +262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100008, guid: 7af82c71cbb29b244970b662129911e9, type: 3}
       propertyPath: m_Name
-      value: zp11
+      value: ZP11
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 7af82c71cbb29b244970b662129911e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1067,7 +1067,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 8dd0481389c53734ebc17cc63baa642d, type: 3}
       propertyPath: m_Name
-      value: energy_academy_europe
+      value: NB06
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8dd0481389c53734ebc17cc63baa642d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 607556192}
   - component: {fileID: 607556191}
   m_Layer: 5
-  m_Name: Buttons
+  m_Name: CloseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1851,7 +1851,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100006, guid: 6c367449b0a6529499791cf944e50229, type: 3}
       propertyPath: m_Name
-      value: dd05
+      value: DD05
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 6c367449b0a6529499791cf944e50229, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2362,7 +2362,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 35a12059185c01c4893f8dbdfbf354e7, type: 3}
       propertyPath: m_Name
-      value: zp09
+      value: ZP09
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 35a12059185c01c4893f8dbdfbf354e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2435,7 +2435,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100016, guid: 655e7fc7fc27681499d2fa614173064a, type: 3}
       propertyPath: m_Name
-      value: ze10
+      value: ZE10
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 655e7fc7fc27681499d2fa614173064a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2679,7 +2679,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: fe4e664df37939a4f8a4c75e80517d12, type: 3}
       propertyPath: m_Name
-      value: Sportcentrum
+      value: ZP17
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe4e664df37939a4f8a4c75e80517d12, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2756,7 +2756,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 9f9c5e4f0afd2fa45b406fde4a193374, type: 3}
       propertyPath: m_Name
-      value: zp7_current
+      value: ZP07
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9f9c5e4f0afd2fa45b406fde4a193374, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3541,7 +3541,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100008, guid: fbf27d840edc2a8498a6d963ff95fa30, type: 3}
       propertyPath: m_Name
-      value: zp17a
+      value: ZP17a
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: fbf27d840edc2a8498a6d963ff95fa30, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3626,7 +3626,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 959b6b43f4b41ce48ac585f698fdf8e8, type: 3}
       propertyPath: m_Name
-      value: zp23
+      value: ZP23
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 959b6b43f4b41ce48ac585f698fdf8e8, type: 3}
       propertyPath: m_LocalPosition.x
