@@ -9,7 +9,7 @@ public class PopulateGrid : MonoBehaviour
     public GameObject prefab;
     public GameObject buildingPanel;
     public int numberToCreate;
-    private string[] buildingCodes = { "BB16", "DD05", "NB06", "ZE10", "ZL17", "ZP06", "ZP07", "ZP09", "ZP11", "ZP17", "ZP17a", "ZP23" };
+    private string[] buildingCodes = { "DD05", "NB06", "ZE10", "ZP07", "ZP09", "ZP11", "ZP17", "ZP17a", "ZP23", "BB05" };
     //Text buttonText;
     // Start is called before the first frame update
     void Start()

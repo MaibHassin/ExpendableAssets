@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +21,12 @@ public class SelectBuilding : MonoBehaviour
     Image btnInfo;
     Image btnInfoChild;
 
+    private Dictionary<string, Vector3> buildingPosition = new Dictionary<string, Vector3>();
+    private string[] buildingCodes = { "DD05", "NB06", "ZE10", "ZP07", "ZP09", "ZP11", "ZP17", "ZP17a", "ZP23", "BB05" };
+    private Vector3 buildingCoordinates = new Vector3();
+    private Vector3 oldPosition = new Vector3();
+    GameObject position;
+    Camera myCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +45,15 @@ public class SelectBuilding : MonoBehaviour
         btn3dChild = button3dChild.GetComponent<Image>();
         btnInfo = buttonInfo.GetComponent<Image>();
         btnInfoChild = buttonInfoChild.GetComponent<Image>();
+
+        myCamera = Camera.main;
+
+        //for (int i=0; i<10; i++)
+        //{
+        //    position = GameObject.Find(buildingCodes[i]).gameObject;
+        //    buildingCoordinates[i] = position.transform.position;
+        //    Debug.Log(buildingCodes[i] + ":" + buildingCoordinates[i]);
+        //}
         
     }
 
@@ -60,8 +75,15 @@ public class SelectBuilding : MonoBehaviour
         if(searchImage != null)
         {
             searchImage.SetActive(false);
+            searchText.SetActive(true);
         }
         selectedButtonText = thisButton.GetComponentInChildren<Text>().text;
         searchText.GetComponent<Text>().text = selectedButtonText;
+
+        oldPosition = myCamera.transform.position;
+        position = GameObject.Find(selectedButtonText).gameObject;
+        buildingCoordinates = position.transform.position;
+        myCamera.transform.position = buildingCoordinates;
+        myCamera.orthographicSize = 50.0f;
     }
 }

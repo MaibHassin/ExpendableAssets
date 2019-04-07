@@ -1,0 +1,395 @@
+{
+  "Buildings":
+  [
+    {
+      "code": "DD05",
+      "name": "De Deimten",
+      "location": "De Deimten 5",
+      "sections": "N/A",
+      "departments":
+      {
+        "SABE": true,
+        "SABK": true,
+        "SAGZ": true,
+        "SASS": false,
+        "SAVK": false,
+        "SAVP": false,
+        "SCMI": true,
+        "SIBK": true,
+        "SIBS": false,
+        "SIEN": true,
+        "SIFE": true,
+        "SIFM": false,
+        "SILS": false,
+        "SIMM": true,
+        "SIRE": false,
+        "SISP": false,
+        "SITE": true,
+        "SEPA": true
+      },
+      "facilities":
+      {
+        "cafetaria": false,
+        "ATM": false,
+        "parking_meter": false,
+        "library": false,
+        "sitting_space": false,
+        "printers": false,
+        "bookable_room": false,
+        "coffee_machine": true,
+        "vending_machine": true
+      }
+    },
+    {
+      "code": "NB06",
+      "name": "Energy Academy Europe",
+      "location": "Nijenborgh 6",
+      "sections": "N/A",
+      "departments":
+      {
+        "SABE": true,
+        "SABK": true,
+        "SAGZ": true,
+        "SASS": false,
+        "SAVK": false,
+        "SAVP": false,
+        "SCMI": true,
+        "SIBK": true,
+        "SIBS": false,
+        "SIEN": true,
+        "SIFE": true,
+        "SIFM": false,
+        "SILS": false,
+        "SIMM": true,
+        "SIRE": false,
+        "SISP": false,
+        "SITE": true,
+        "SEPA": true
+      },
+      "facilities":
+      {
+        "cafetaria": false,
+        "ATM": true,
+        "parking_meter": true,
+        "library": true,
+        "sitting_space": true,
+        "printers": true,
+        "bookable_room": true,
+        "coffee_machine": true,
+        "vending_machine": true
+      }
+    },
+    {
+      "code": "ZE10",
+      "name": "Digital Society Hub",
+      "location": "Zernikepark 10",
+      "sections": "N/A",
+      "departments":
+      {
+        "SABE": true,
+        "SABK": true,
+        "SAGZ": true,
+        "SASS": false,
+        "SAVK": false,
+        "SAVP": false,
+        "SCMI": true,
+        "SIBK": true,
+        "SIBS": false,
+        "SIEN": true,
+        "SIFE": true,
+        "SIFM": false,
+        "SILS": false,
+        "SIMM": true,
+        "SIRE": false,
+        "SISP": false,
+        "SITE": true,
+        "SEPA": true
+      },
+      "facilities":
+      {
+        "cafetaria": false,
+        "ATM": true,
+        "parking_meter": true,
+        "library": true,
+        "sitting_space": true,
+        "printers": true,
+        "bookable_room": true,
+        "coffee_machine": true,
+        "vending_machine": true
+      }
+    },
+    {
+      "code": "ZP07",
+      "name": "Van OlstToren",
+      "location": "Zernikeplein 7",
+      "sections": "A, B, C, E, F, G, H, I, Atrium, Van Olsttoren, De Appel",
+      "departments":
+      {
+        "SABE": true,
+        "SABK": true,
+        "SAGZ": true,
+        "SASS": false,
+        "SAVK": false,
+        "SAVP": false,
+        "SCMI": true,
+        "SIBK": true,
+        "SIBS": false,
+        "SIEN": true,
+        "SIFE": true,
+        "SIFM": false,
+        "SILS": false,
+        "SIMM": true,
+        "SIRE": false,
+        "SISP": false,
+        "SITE": true,
+        "SEPA": true
+      },
+      "facilities":
+      {
+        "cafetaria": false,
+        "ATM": true,
+        "parking_meter": true,
+        "library": true,
+        "sitting_space": true,
+        "printers": true,
+        "bookable_room": true,
+        "coffee_machine": true,
+        "vending_machine": true
+      }
+    },
+    {
+      "code": "ZP09",
+      "name": "BrugsmaBorg",
+      "location": "Zernikeplein 9",
+      "sections": "D",
+      "departments":
+      {
+        "SABE": true,
+        "SABK": true,
+        "SAGZ": true,
+        "SASS": false,
+        "SAVK": false,
+        "SAVP": false,
+        "SCMI": true,
+        "SIBK": true,
+        "SIBS": false,
+        "SIEN": true,
+        "SIFE": true,
+        "SIFM": false,
+        "SILS": false,
+        "SIMM": true,
+        "SIRE": false,
+        "SISP": false,
+        "SITE": true,
+        "SEPA": true
+      },
+      "facilities":
+      {
+        "cafetaria": false,
+        "ATM": true,
+        "parking_meter": true,
+        "library": true,
+        "sitting_space": true,
+        "printers": true,
+        "bookable_room": true,
+        "coffee_machine": true,
+        "vending_machine": true
+      }
+    },
+    {
+      "code": "ZP11",
+      "name": "Van DoorenVeste",
+      "location": "Zernikeplein 11",
+      "sections": "A, B, C, D, H",
+      "departments":
+      {
+        "SABE": true,
+        "SABK": true,
+        "SAGZ": true,
+        "SASS": false,
+        "SAVK": false,
+        "SAVP": false,
+        "SCMI": true,
+        "SIBK": true,
+        "SIBS": false,
+        "SIEN": true,
+        "SIFE": true,
+        "SIFM": false,
+        "SILS": false,
+        "SIMM": true,
+        "SIRE": false,
+        "SISP": false,
+        "SITE": true,
+        "SEPA": true
+      },
+      "facilities":
+      {
+        "cafetaria": false,
+        "ATM": true,
+        "parking_meter": true,
+        "library": true,
+        "sitting_space": true,
+        "printers": true,
+        "bookable_room": true,
+        "coffee_machine": true,
+        "vending_machine": true
+      }
+    },
+    {
+      "code": "ZP17",
+      "name": "Willem-Alexander Sportcentrum",
+      "location": "Zernikeplein 17",
+      "sections": "",
+      "departments":
+      {
+        "SABE": true,
+        "SABK": true,
+        "SAGZ": true,
+        "SASS": false,
+        "SAVK": false,
+        "SAVP": false,
+        "SCMI": true,
+        "SIBK": true,
+        "SIBS": false,
+        "SIEN": true,
+        "SIFE": true,
+        "SIFM": false,
+        "SILS": false,
+        "SIMM": true,
+        "SIRE": false,
+        "SISP": false,
+        "SITE": true,
+        "SEPA": true
+      },
+      "facilities":
+      {
+        "cafetaria": false,
+        "ATM": true,
+        "parking_meter": true,
+        "library": true,
+        "sitting_space": true,
+        "printers": true,
+        "bookable_room": true,
+        "coffee_machine": true,
+        "vending_machine": true
+      }
+    },
+    {
+      "code": "ZP17a",
+      "name": "P-gebouw",
+      "location": "Zernikeplein 17a",
+      "sections": "P",
+      "departments":
+      {
+        "SABE": true,
+        "SABK": true,
+        "SAGZ": true,
+        "SASS": false,
+        "SAVK": false,
+        "SAVP": false,
+        "SCMI": true,
+        "SIBK": true,
+        "SIBS": false,
+        "SIEN": true,
+        "SIFE": true,
+        "SIFM": false,
+        "SILS": false,
+        "SIMM": true,
+        "SIRE": false,
+        "SISP": false,
+        "SITE": true,
+        "SEPA": true
+      },
+      "facilities":
+      {
+        "cafetaria": false,
+        "ATM": true,
+        "parking_meter": true,
+        "library": true,
+        "sitting_space": true,
+        "printers": true,
+        "bookable_room": true,
+        "coffee_machine": true,
+        "vending_machine": true
+      }
+    },
+    {
+      "code": "ZP23",
+      "name": "Marie Kamphuisborg",
+      "location": "Zernikeplein 23",
+      "sections": "N/A",
+      "departments":
+      {
+        "SABE": true,
+        "SABK": true,
+        "SAGZ": true,
+        "SASS": false,
+        "SAVK": false,
+        "SAVP": false,
+        "SCMI": true,
+        "SIBK": true,
+        "SIBS": false,
+        "SIEN": true,
+        "SIFE": true,
+        "SIFM": false,
+        "SILS": false,
+        "SIMM": true,
+        "SIRE": false,
+        "SISP": false,
+        "SITE": true,
+        "SEPA": true
+      },
+      "facilities":
+      {
+        "cafetaria": false,
+        "ATM": true,
+        "parking_meter": true,
+        "library": true,
+        "sitting_space": true,
+        "printers": true,
+        "bookable_room": true,
+        "coffee_machine": true,
+        "vending_machine": true
+      }
+    },
+    {
+      "code": "BB05",
+      "name": "Aletta Jacobshal",
+      "location": "blauwborgje 4",
+      "sections": "N/A",
+      "departments":
+      {
+        "SABE": true,
+        "SABK": true,
+        "SAGZ": true,
+        "SASS": false,
+        "SAVK": false,
+        "SAVP": false,
+        "SCMI": true,
+        "SIBK": true,
+        "SIBS": false,
+        "SIEN": true,
+        "SIFE": true,
+        "SIFM": false,
+        "SILS": false,
+        "SIMM": true,
+        "SIRE": false,
+        "SISP": false,
+        "SITE": true,
+        "SEPA": true
+      },
+      "facilities":
+      {
+        "cafetaria": false,
+        "ATM": true,
+        "parking_meter": true,
+        "library": true,
+        "sitting_space": true,
+        "printers": true,
+        "bookable_room": true,
+        "coffee_machine": true,
+        "vending_machine": true
+      }
+    }
+  ]
+}
