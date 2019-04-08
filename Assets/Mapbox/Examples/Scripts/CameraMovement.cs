@@ -66,48 +66,48 @@ namespace Mapbox.Examples
 
 		void HandleMouseAndKeyBoard()
 		{
-			if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
-			{
-				var mousePosition = Input.mousePosition;
-				mousePosition.z = _referenceCamera.transform.localPosition.y;
-				_delta = _referenceCamera.ScreenToWorldPoint(mousePosition) - _referenceCamera.transform.localPosition;
-				_delta.y = 0f;
-				if (_shouldDrag == false)
-				{
-					_shouldDrag = true;
-					_origin = _referenceCamera.ScreenToWorldPoint(mousePosition);
-				}
-			}
-			else
-			{
-				_shouldDrag = false;
-			}
+            if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
+            {
+                var mousePosition = Input.mousePosition;
+                mousePosition.z = _referenceCamera.transform.localPosition.y;
+                _delta = _referenceCamera.ScreenToWorldPoint(mousePosition) - _referenceCamera.transform.localPosition;
+                _delta.y = 0f;
+                if (_shouldDrag == false)
+                {
+                    _shouldDrag = true;
+                    _origin = _referenceCamera.ScreenToWorldPoint(mousePosition);
+                }
+            }
+            else
+            {
+                _shouldDrag = false;
+            }
 
-			if (_shouldDrag == true)
-			{
-				var offset = _origin - _delta;
-				offset.y = transform.localPosition.y;
-				transform.localPosition = offset;
-			}
-			else
-			{
-				if (EventSystem.current.IsPointerOverGameObject())
-				{
-					return;
-				}
+            if (_shouldDrag == true)
+            {
+                var offset = _origin - _delta;
+                offset.y = transform.localPosition.y;
+                transform.localPosition = offset;
+            }
+            else
+            {
+                if (EventSystem.current.IsPointerOverGameObject())
+                {
+                    return;
+                }
 
-				var x = Input.GetAxis("Horizontal");
-				var z = Input.GetAxis("Vertical");
-				var y = Input.GetAxis("Mouse ScrollWheel") * _zoomSpeed;
-				if (!(Mathf.Approximately(x, 0) || Mathf.Approximately(y, 0) || Mathf.Approximately(z, 0)))
-				{
-					transform.localPosition += transform.forward * y + (_originalRotation * new Vector3(x * _panSpeed, 0, z * _panSpeed));
-					_map.UpdateMap();
-				}
-			}
+                var x = Input.GetAxis("Horizontal");
+                var z = Input.GetAxis("Vertical");
+                var y = Input.GetAxis("Mouse ScrollWheel") * _zoomSpeed;
+                if (!(Mathf.Approximately(x, 0) || Mathf.Approximately(y, 0) || Mathf.Approximately(z, 0)))
+                {
+                    transform.localPosition += transform.forward * y + (_originalRotation * new Vector3(x * _panSpeed, 0, z * _panSpeed));
+                    _map.UpdateMap();
+                }
+            }
 
 
-		}
+        }
 
 		void Awake()
 		{
