@@ -3,8 +3,10 @@ using System.Collections;
 
 public class CameraControls : MonoBehaviour
 {
-    public float speed = 300.0f;//easing speed
-    public float easingDistance = -10.0f;
+    public float speed = 150.0f;//easing speed
+    public float easingDistance = -2.75f;
+
+    public float orthoZoomSpeed = 0.5f;
 
     Vector3 hit_position = Vector3.zero;
     Vector3 current_position = Vector3.zero;
@@ -12,6 +14,7 @@ public class CameraControls : MonoBehaviour
     float z = 0.0f;
 
     bool flag = false;
+    bool zoomFlag = false;
     Vector3 target_position;
 
     void Start()
@@ -20,7 +23,19 @@ public class CameraControls : MonoBehaviour
 
     void Update()
     {
-        CameraPan();
+        if (!zoomFlag)
+        {
+            CameraPan();
+        }
+        if(Input.touchCount == 2)
+        {
+            zoomFlag = true;
+            CameraZoom();
+        }
+        if (Input.touchCount == 1)
+        {
+            zoomFlag = false;
+        }
     }
 
     void CameraPan()
@@ -67,5 +82,23 @@ public class CameraControls : MonoBehaviour
         direction = direction * easingDistance;
 
         target_position = camera_position + direction;
+    }
+
+    void CameraZoom()
+    {
+        Touch touchZero = Input.GetTouch(0);
+        Touch touchOne = Input.GetTouch(1);
+
+        Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+        Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+        float previousTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+        float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
+
+        float deltaMagDiff = previousTouchDeltaMag - touchDeltaMag;
+        Camera.main.orthographicSize += deltaMagDiff * 0.1f;
+
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, 50.0f, 120.0f);
+       
     }
 }
