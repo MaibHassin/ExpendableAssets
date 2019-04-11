@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-D:/Zernike Campus Development/Zernike Campus/test.apk
+D:/Expendable Assets/Zernike Campus/Zernike Campus.apk
 SceneListBegin?
 Assets/Scenes/Home.unity
 SceneListEnd?
@@ -221,6 +221,7 @@ ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration
 b13222200b65a7aab07dab0db3a30002 Assembly-CSharp.dll:UnityEngine.XR.iOS.UnityARVideo
 bf7611f578cc4391f4c42d7d2643311c Assembly-CSharp.dll:UnityEngine.XR.iOS.EditorHitTest
 ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Modifiers.UvModifier
+199c05c7786186578d8b7b443beb833c Assembly-CSharp.dll:.CameraControls
 fea2d676bca3c708f6b399119fa3ca3f Assembly-CSharp.dll:.UnityARUserAnchorExample
 563660a00e6e81cb62dbadd1cbc099dc Assembly-CSharp.dll:Mapbox.Examples.AstronautMouseController
 57218997c1c8facfc9c494649a7995ac Assembly-CSharp.dll:Mapbox.Examples.ChangeShadowDistance
@@ -255,7 +256,7 @@ e70f106593e61be751f017ac8554df2c Assembly-CSharp.dll:Mapbox.Examples.Scripts.Uti
 e37b4c3bf08edb2c5d88aaf3ee0e8ec5 Assembly-CSharp.dll:Mapbox.Unity.Location.LocationProviderFactory
 d30406e93dfde99d69d2b1c0ea2559b1 Assembly-CSharp.dll:Mapbox.Unity.Location.AngleSmoothingNoOp
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
-afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Controls
+6e4b0fb8cfc64c07241e423175aedbfe Assembly-CSharp.dll:.Controls
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UpdateShaderCoordinatesByARPlane
 1ca32ecd08c306d31036ac06d96d0f70 Assembly-CSharp.dll:Mapbox.Examples.SpawnOnGlobeExample
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
