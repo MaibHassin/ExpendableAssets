@@ -3,8 +3,8 @@ using System.Collections;
 
 public class CameraControls : MonoBehaviour
 {
-    public float speed = 150.0f;//easing speed
-    public float easingDistance = -2.75f;
+    public float speed = 250.0f;//easing speed
+    public float easingDistance = -4.0f;
 
     public float orthoZoomSpeed = 0.5f;
 
@@ -14,6 +14,7 @@ public class CameraControls : MonoBehaviour
     float z = 0.0f;
 
     bool flag = false;
+    bool panFlag = false;
     bool zoomFlag = false;
     Vector3 target_position;
 
@@ -21,21 +22,49 @@ public class CameraControls : MonoBehaviour
     {
     }
 
-    void Update()
+    void LateUpdate()
     {
-        if (!zoomFlag)
-        {
-            CameraPan();
-        }
-        if(Input.touchCount == 2)
+        //if(Input.touchCount > 0)
+        //{
+            //if (Input.touchCount == 1)
+            //{
+            //    panFlag = false;
+            //}
+            //if (Input.touchCount == 2)
+            //{
+            //    zoomFlag = false;
+            //}
+            //if (Input.touchCount == 3)
+            //{
+            //    panFlag = true;
+            //    zoomFlag = true;
+            //}
+        if (!panFlag)
         {
             zoomFlag = true;
-            CameraZoom();
+            CameraPan();
         }
-        if (Input.touchCount == 1)
+        if(Input.touchCount > 1)
         {
             zoomFlag = false;
+            panFlag = true;
         }
+        if(Input.touchCount == 0)
+        {
+            panFlag = false;
+            zoomFlag = true;
+        }
+        if (!zoomFlag)
+        {
+            CameraZoom();
+        }
+
+        //if(Input.touchCount == 3)
+        //{
+        //    zoomFlag = true;
+        //    panFlag = true;
+        //}
+        //}
     }
 
     void CameraPan()
@@ -57,9 +86,9 @@ public class CameraControls : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, target_position, Time.deltaTime * speed);
             transform.position = new Vector3(
-                Mathf.Clamp(transform.position.x, -205.0f, 87.0f),
-                Mathf.Clamp(transform.position.y, 445.0f, 613.0f),
-                Mathf.Clamp(transform.position.z, -502.0f, -292.0f)
+                Mathf.Clamp(transform.position.x, -247.0f, 48.0f),
+                Mathf.Clamp(transform.position.y, 200.0f, 400.0f),
+                Mathf.Clamp(transform.position.z, -271.0f, -75.0f)
                 );
             if (transform.position == target_position)//reached?
             {
